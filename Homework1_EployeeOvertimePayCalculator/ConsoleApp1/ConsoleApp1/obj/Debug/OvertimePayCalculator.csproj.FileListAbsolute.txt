@@ -1,8 +1,0 @@
-C:\Users\ayseg.DESKTOP-NSUSSPK\Desktop\C#Bootcamp\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
-C:\Users\ayseg.DESKTOP-NSUSSPK\Desktop\C#Bootcamp\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
-C:\Users\ayseg.DESKTOP-NSUSSPK\Desktop\C#Bootcamp\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
-C:\Users\ayseg.DESKTOP-NSUSSPK\Desktop\C#Bootcamp\ConsoleApp1\ConsoleApp1\obj\Debug\OvertimePayCalculator.csproj.AssemblyReference.cache
-C:\Users\ayseg.DESKTOP-NSUSSPK\Desktop\C#Bootcamp\ConsoleApp1\ConsoleApp1\obj\Debug\OvertimePayCalculator.csproj.SuggestedBindingRedirects.cache
-C:\Users\ayseg.DESKTOP-NSUSSPK\Desktop\C#Bootcamp\ConsoleApp1\ConsoleApp1\obj\Debug\OvertimePayCalculator.csproj.CoreCompileInputs.cache
-C:\Users\ayseg.DESKTOP-NSUSSPK\Desktop\C#Bootcamp\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
-C:\Users\ayseg.DESKTOP-NSUSSPK\Desktop\C#Bootcamp\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
