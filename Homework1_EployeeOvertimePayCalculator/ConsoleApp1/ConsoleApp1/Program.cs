@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,13 +19,19 @@ namespace OvertimePayCalculator
             var employeeManager = new EmployeeManager();
 
             var employee = new Employee(1, "Aysegul", "Aydin");
+            var employee2 = new Employee(2, "Yusuf", "Aydin");
 
             employeeManager.AddEmployee(employee);
+            employeeManager.AddEmployee(employee2);
 
             List<Employee> employeeList = employeeManager.GetEmployeeList();
 
+            EmployeeEnterence:
+
+            int breakCount = 0;
 
             Console.WriteLine("Enter your Id for check-in.");
+
             try
             {
                 int id = int.Parse(Console.ReadLine());
@@ -45,8 +52,10 @@ namespace OvertimePayCalculator
 
                     while( employeeStatus != "q")
                     {
-                        if (employeeStatus == "b")
+                        if (employeeStatus == "b" && breakCount <= 2)
                         {
+                            breakCount++;
+
                             Console.WriteLine("You give 15 min break.");
 
                             breakTimeAsMinute += 15;
@@ -54,6 +63,16 @@ namespace OvertimePayCalculator
                             Console.WriteLine($"Your break time for today is {breakTimeAsMinute} minute.");
 
                             employeeStatus = Console.ReadLine().ToLower();
+
+                        }
+                        else if (employeeStatus == "b" && breakCount > 2)
+                        {
+                            breakCount++;
+
+                            Console.WriteLine($"You've run out of breaks for today.");
+
+                            employeeStatus = Console.ReadLine().ToLower();
+
                         }
                         else
                         {
@@ -73,15 +92,30 @@ namespace OvertimePayCalculator
                     }
 
                 }
+                else // if the employee with given id is not valid
+                {
+                    Console.WriteLine("The employee with given id is not valid. Try again.");
+
+                    goto EmployeeEnterence;
+                }
 
             }
             catch
             {
-                Console.WriteLine("Warning: Unexpected value.");
+                Console.WriteLine("Warning: Unexpected value. Try again.");
+
+                goto EmployeeEnterence;
                 
             }
 
-            Console.ReadKey();
+            Console.WriteLine("Do you want to enter id for new employee or quit the program? y for yes or anything else for no.");
+
+            var programStatus = Console.ReadLine().ToLower();
+
+            if (programStatus == "y")
+            {
+                goto EmployeeEnterence;
+            }
             
         }   
 
